@@ -6,6 +6,8 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { MessagingModule } from './messaging/messaging.module';
+import { FirebaseModule } from './firebase/firebase.module';
 
 @Module({
   imports: [
@@ -17,6 +19,8 @@ import { AppService } from './app.service';
 
     RedisModule,
     CacheModule,
+    MessagingModule,
+    FirebaseModule,
   ],
   controllers: [AppController],
   providers: [AppService],
