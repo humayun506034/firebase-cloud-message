@@ -15,6 +15,7 @@ import { FirebaseModule } from './firebase/firebase.module';
     PrismaModule,
     ConfigModule.forRoot({
       isGlobal: true,
+       envFilePath: '.env',
     }),
 
     RedisModule,
